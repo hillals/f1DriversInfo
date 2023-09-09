@@ -1,0 +1,99 @@
+body {
+    font-family: sans-serif;
+    background-color: #FF1801;
+}
+
+* {
+    box-sizing: border-box;
+}
+h1 {
+    color: #eee;
+    margin-bottom: 30px;
+}
+.container {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+#driversList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+.driver {
+    list-style-type: none;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        'name image'
+        'house image';
+    text-align: left;
+}
+
+.driver > h2 {
+    grid-area: name;
+    margin-bottom: 50px;
+}
+
+.driver > p {
+    grid-area: house;
+    margin: 5;
+    margin-top: -50px;
+}
+.driver > p2 {
+    grid-area: house;
+    margin: 5;
+    margin-top: -30px;
+}
+.driver > p3 {
+    grid-area: house;
+    margin: 5;
+    margin-top: -10px;
+}
+.driver > a.driver-link {
+    display: inline-block;
+    padding: 3px 3px;
+    background-color: #FF1801; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+    margin-top: 50px;
+}
+
+/* Hover effect */
+a.driver-link:hover {
+    color:#FF1801;
+    background-color: #C0C0C0; /* Darker blue background color on hover */
+}
+.driver > img {
+    max-height: 100px;
+    grid-area: image;
+}
+
+#searchBar {
+    width: 100%;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+#searchWrapper {
+    position: relative;
+}
+
+#searchWrapper::after {
+    content: '🔍';
+    position: absolute;
+    top: 7px;
+    right: 15px;
+}
